@@ -1,0 +1,53 @@
+.drag__bar::-webkit-slider-runnable-track,
+.drag__bar::-webkit-slider-thumb {
+   -webkit-appearance: none;
+}
+.drag__bar::-webkit-slider-thumb {
+   appearance: none;
+   width: 16px;
+   height: 36px;
+   border-radius: 50%;
+   background: #57f0e0;
+   cursor: pointer;
+   margin-top: -6px;
+}
+/* 
+.drag__bar::-moz-range-thumb {
+   appearance: none;
+   width: 16px;
+   height: 36px;
+   border-radius: 50%;
+   background: #57f0e0;
+   cursor: pointer;
+}
+.drag__bar::-ms-thumb {
+   position: relative;
+   appearance: none;
+   width: 16px;
+   height: 36px;
+   border-radius: 50%;
+   background: #57f0e0;
+   cursor: pointer;
+} */
+.drag__bar::-webkit-slider-runnable-track {
+   background-color: #d2dddc;
+   width: 40px;
+   height: 3px;
+   outline: none;
+}
+/* .disc{
+   animation:5s infinite linear rotate;
+   animation-play-state: paused;
+}
+.disc.play{
+   animation:5s infinite linear rotate;
+   animation-play-state: running;
+}
+@keyframes rotate{
+   from{
+      transform: rotate(0);
+   }
+   to{
+      transform: rotate(360deg);
+   }
+} */
