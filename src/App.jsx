@@ -14,8 +14,8 @@ function App() {
 
    window.addEventListener("scroll", () => {
       document.documentElement.scrollTop > 10
-         ? btnTop.current.classList.add("opacity-100") 
-         : btnTop.current.classList.remove("opacity-100");
+         ? btnTop.current.classList.add("!opacity-100") 
+         : btnTop.current.classList.remove("!opacity-100");
    });
 
    return (
