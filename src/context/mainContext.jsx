@@ -5,6 +5,7 @@ export const MainContext = createContext();
 export function MainContextProvider(props) {
    const [isPlaying, changeStateMedia] = useState(false);
 
+   const btnTop = useRef();
    const btnVolume = useRef();
    const audio = useRef();
    const disc = useRef();
@@ -12,7 +13,7 @@ export function MainContextProvider(props) {
    const volume = useRef();
    const btnNavPlay = useRef();
    const btnModalNavPlay = useRef();
-   // SECCIONES SCROLL ANIMADO ENTRE SECCIONES 
+   // SECCIONES SCROLL ANIMADO ENTRE SECCIONES
    const home = useRef();
    const prog = useRef();
    const cont = useRef();
@@ -21,10 +22,9 @@ export function MainContextProvider(props) {
    function scrollTosection(ref) {
       window.scrollTo({
          top: ref.current.offsetTop,
-         behavior:"smooth"
-      })
+         behavior: "smooth",
+      });
    }
-
 
    function play() {
       !isPlaying ? audio.current.play() : audio.current.pause();
@@ -48,6 +48,7 @@ export function MainContextProvider(props) {
       <MainContext.Provider
          value={{
             play,
+            btnTop,
             btnVolume,
             disc,
             audio,

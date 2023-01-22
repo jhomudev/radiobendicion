@@ -2,15 +2,10 @@ import React from "react";
 import Mediaplayer from "./Mediaplayer";
 import imgMusic from "../assets/imgMusic.jpg";
 import img3 from "../assets/img3.jpeg";
-import { useContext } from "react";
-import { MainContext } from "../context/mainContext";
-import { FaAngleUp } from "react-icons/fa";
 
 function HomeSection() {
-   const {home,scrollTosection} = useContext(MainContext);
-
    return (
-      <div ref={home} className="bg-c_main-normal h-auto">
+      <div className="relative bg-c_main-normal h-auto">
          <div className="relative container mx-auto px-[5%] h-screen grid grid-cols-1 lg:grid-cols-2 justify-center lg:items-center">
             <div className="after-imgBg absolute z-0 left-0 top-0 w-full h-full object-contain">
                <img
@@ -20,7 +15,7 @@ function HomeSection() {
                />
             </div>
             <div className="relative z-1 lg:col-end-2 flex flex-col items-center justify-center text-white">
-               <strong className="flex flex-wrap w-full mt-14 lg:mt-0 font-bahiana text-5xl tracking-wider">
+               <strong className="flex flex-wrap w-full mt-14 lg:-mt-20 font-bahiana text-5xl tracking-wider">
                   RADIO BENDICIÓN
                   <br />
                   90.5 FM
@@ -33,9 +28,8 @@ function HomeSection() {
                   numquam distinctio. Dolores, vero neque?
                </p>
                <i className="mt-5 text-center">
-                  "Aclamad con júbilo al SEÑOR,
-                  toda la tierra; prorrumpid y cantad con gozo, cantad
-                  alabanzas."  Salmos 98:4
+                  "Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y
+                  cantad con gozo, cantad alabanzas." Salmos 98:4
                </i>
             </div>
             <div className="relative h-full grid place-items-center">
@@ -50,7 +44,6 @@ function HomeSection() {
                <img src={logo} alt="logo radio bendición" className="relative w-full max-w-lg h-min mx-auto animate-balance z-10" />
             </div> */}
          </div>
-         <button onClick={()=>scrollTosection(home)} className="fixed bottom-3 hover:bottom-4 right-3 z-30 bg-c_red text-white shadow-lg text-whote p-3 rounded-xl transition-all duration-200"><FaAngleUp/></button>
          <svg
             className="absolute bottom-0 left-0"
             xmlns="http://www.w3.org/2000/svg"

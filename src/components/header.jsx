@@ -15,21 +15,20 @@ function Header() {
       nos,
       scrollTosection,
    } = useContext(MainContext);
-   function ItemNav({ to, text, capitalizer }) {
+   function ItemNav({ to, text, capitalizer,enabledShowBar }) {
       return (
          <li
             onClick={() => {
-               showBar;
+               if(enabledShowBar) showBar();
                scrollTosection(to);
             }}
+            // onClick={showBar}
             className={
                capitalizer +
                " grid justify-center items-center sm:justify-start font-medium cursor-pointer"
             }
          >
-            <a
-               className="text-white text-lg hover:font-bold hover:text-xl transition-all duration-200"
-            >
+            <a className="text-white text-lg hover:font-bold hover:text-xl transition-all duration-200">
                {text}
             </a>
          </li>
@@ -41,13 +40,20 @@ function Header() {
    const [isHidden, setState] = useState("w-0 p-0");
 
    function showBar() {
-      isHidden == "w-0 p-0"
-         ? setState("w-full p-10 sm:w-96")
-         : setState("w-0 p-0");
+      if (isHidden == "w-0 p-0") {
+         setState("w-full p-10 sm:w-96");
+         document.body.classList.add("overflow-hidden");
+      } else {
+         setState("w-0 p-0");
+         document.body.classList.remove("overflow-hidden");
+      }
    }
 
    return (
-      <div className="absolute w-full z-50 top-0 px-2 sm:p-0headerBox bg-c_main-normal font-advent">
+      <div
+         ref={home}
+         className="w-full z-50 top-0 px-2 sm:p-0headerBox bg-c_main-normal font-advent"
+      >
          <header className="relative container h-20 mx-auto flex justify-between items-center">
             <div className="logo relative w-28 sm:w-36 h-full object-contain">
                <img
@@ -65,10 +71,10 @@ function Header() {
             </div>
             <nav className="hidden md:flex justify-between gap-10">
                <ul className="flex gap-10">
-                  <ItemNav to={home} text="Home" />
-                  <ItemNav to={prog} text="Programación" />
-                  <ItemNav to={cont} text="Contactos" />
-                  <ItemNav to={nos} text="Nosotros" />
+                  <ItemNav to={home} enabledShowBar={false} text="Home" />
+                  <ItemNav to={prog} enabledShowBar={false} text="Programación" />
+                  <ItemNav to={cont} enabledShowBar={false} text="Contactos" />
+                  <ItemNav to={nos} enabledShowBar={false} text="Nosotros" />
                </ul>
                <button
                   ref={btnNavPlay}
@@ -87,14 +93,10 @@ function Header() {
             }
          >
             <ul className="flex flex-col gap-10">
-               <ItemNav to={home} capitalizer="uppercase" text="Home" />
-               <ItemNav
-                  to={prog}
-                  capitalizer="uppercase"
-                  text="Programación"
-               />
-               <ItemNav to={cont} capitalizer="uppercase" text="Contactos" />
-               <ItemNav to={nos} capitalizer="uppercase" text="Nosotros" />
+               <ItemNav to={home} enabledShowBar={true} capitalizer="uppercase" text="Home" />
+               <ItemNav to={prog} enabledShowBar={true} capitalizer="uppercase" text="Programación" />
+               <ItemNav to={cont} enabledShowBar={true} capitalizer="uppercase" text="Contactos" />
+               <ItemNav to={nos} enabledShowBar={true} capitalizer="uppercase" text="Nosotros" />
             </ul>
             <button
                ref={btnModalNavPlay}
