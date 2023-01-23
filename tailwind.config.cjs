@@ -8,6 +8,7 @@ module.exports = {
             rale: ['"Raleway"', "sans-serif"],
             advent: ['"Advent Pro"', "sans-serif"],
             bahiana: ['"Bahiana"', "cursive"],
+            crimson: ['"Crimson Pro"', "serif"],
          },
          colors: {
             c_main: {

@@ -4,9 +4,10 @@ import g_uxfe from "../assets/g_uxfe.jpg";
 import g_yuri from "../assets/g_yuri.jpg";
 import g_hillsong from "../assets/g_hillsong.webp";
 import g_ador from "../assets/g_ador.jpg";
+import g_predica from "../assets/g_predica.jpg";
+import g_infantil from "../assets/g_infantil.jpg";
 import { useContext } from "react";
 import { MainContext } from "../context/mainContext";
-
 
 function ArticleProg({ img, content, h_ini, h_fin }) {
    return (
@@ -14,7 +15,7 @@ function ArticleProg({ img, content, h_ini, h_fin }) {
          <div
             content={content}
             className={
-               "relative h-auto sm:h-60 w-full overflow-hidden object-cover contentGenero after:content-[attr(content)]"
+               "relative h-auto sm:h-60 w-full overflow-hidden object-cover shadow-xl contentGenero after:content-[attr(content)]"
             }
          >
             <img
@@ -31,18 +32,15 @@ function ArticleProg({ img, content, h_ini, h_fin }) {
 }
 
 function ProgSection() {
-   const {prog} = useContext(MainContext);
+   const { prog } = useContext(MainContext);
 
-   const polka =
-      "polka Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sint modi voluptatem veniam, doloribus natus, ab repudiandae asperiores incidunt, cumque molestias sit quia nam esse sed distinctio labore est repellendus?";
-   const cumbia =
-      "cumbia Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sint modi voluptatem veniam, doloribus natus, ab repudiandae asperiores incidunt, cumque molestias sit quia nam esse sed distinctio labore est repellendus?";
-   const gospel =
-      "gospel Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sint modi voluptatem veniam, doloribus natus, ab repudiandae asperiores incidunt, cumque molestias sit quia nam esse sed distinctio labore est repellendus?";
-   const latin =
-      "latin Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sint modi voluptatem veniam, doloribus natus, ab repudiandae asperiores incidunt, cumque molestias sit quia nam esse sed distinctio labore est repellendus?";
-   const ador =
-      "ador Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sint modi voluptatem veniam, doloribus natus, ab repudiandae asperiores incidunt, cumque molestias sit quia nam esse sed distinctio labore est repellendus?";
+   const polka = "FOLROCK, POLKA";
+   const cumbia = "CUMBIA";
+   const gospel = "GOSPEL";
+   const latin = "LATINOAMERICANO";
+   const ador = "ADORACIÓN";
+   const infan = "INFANTIL";
+   const pred = "MENSAJES, PRÉDICAS";
    return (
       <div ref={prog} className="relative bg-white h-auto pt-5">
          <div className="relative container mx-auto px-[5%] min-h-screen">
@@ -81,17 +79,30 @@ function ProgSection() {
                   h_ini="3:00 pm"
                   h_fin="6:00 pm"
                />
+               <ArticleProg
+                  img={g_infantil}
+                  content={infan}
+                  h_ini="3:00 pm"
+                  h_fin="6:00 pm"
+               />
+               <ArticleProg
+                  img={g_predica}
+                  content={pred}
+                  h_ini="3:00 pm"
+                  h_fin="6:00 pm"
+               />
             </div>
             <br />
             <p className="mx-auto font-rale text-slate-500 text-sm w-full max-w-3xl text-center">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-               dignissimos iste alias quod, eveniet, veritatis facere illum
-               debitis ducimus hic in, laborum nihil ab blanditiis suscipit eum
-               distinctio vel accusantium.
+               Nuestra programación esta pensada para todo público cristiano,
+               incluyendo programación infantil hasta juvenil y folcklorica,
+               además de mensajes de la palabra de Dios. Disfrute de esta
+               programación y que su vida se llene de la bendición del Señor a
+               traves de nuestra emisora.
             </p>
          </div>
          <svg
-            className="relative lg:absolute lg:-bottom-16  xl:-bottom-28 left-0"
+            className="relative xl:-mt-16"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
          >

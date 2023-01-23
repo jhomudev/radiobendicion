@@ -29,6 +29,7 @@ function App() {
                <NosotrosSection />
                <button
                   ref={btnTop}
+                  title="Home"
                   onClick={() => scrollTosection(home)}
                   className="fixed bottom-3 hover:bottom-4 right-3 z-30 bg-c_red text-white shadow-lg text-xl p-3 rounded-xl transition-all duration-200 opacity-0"
                >

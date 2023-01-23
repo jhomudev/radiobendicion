@@ -67,6 +67,7 @@ function Mediaplayer() {
                      className="range w-full h-1 rounded-full bg-blue-100 appearance-none "
                      name="volume"
                      ref={volume}
+                     title="Volumen"
                      max="1"
                      min="0"
                      step={0.01}

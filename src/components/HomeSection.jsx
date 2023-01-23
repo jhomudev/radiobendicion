@@ -6,7 +6,7 @@ import img3 from "../assets/img3.jpeg";
 function HomeSection() {
    return (
       <div className="relative bg-c_main-normal h-auto">
-         <div className="relative container mx-auto px-[5%] h-screen grid grid-cols-1 lg:grid-cols-2 justify-center lg:items-center">
+         <div className="relative container min-h-[calc(100vh-5rem)] mx-auto px-[5%] grid grid-cols-1 lg:grid-cols-2 justify-center lg:items-center">
             <div className="after-imgBg absolute z-0 left-0 top-0 w-full h-full object-contain">
                <img
                   className="relative opacity-20 w-full h-full"
@@ -15,17 +15,17 @@ function HomeSection() {
                />
             </div>
             <div className="relative z-1 lg:col-end-2 flex flex-col items-center justify-center text-white">
-               <strong className="flex flex-wrap w-full mt-14 lg:-mt-20 font-bahiana text-5xl tracking-wider">
+               <strong className="flex flex-wrap w-full mt-14 lg:-mt-20 font-crimson font-extrabold italic text-5xl tracking-wider">
                   RADIO BENDICIÓN
                   <br />
                   90.5 FM
                   <span className="w-full text-xl">PALMAPAMPA SAMUGARI</span>
                </strong>
                <p className="text-md font-advent mt-4">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Alias aut deleniti commodi inventore, dolorem quisquam dolore
-                  quod asperiores delectus totam iste magni nemo eum repellat,
-                  numquam distinctio. Dolores, vero neque?
+                  La radio bendicion.com 90.5 FM. Es una bendición para
+                  creyentes en Cristo y el público en general de habla quechua y
+                  hispana. Es una radio digital que transmite desde Perú para
+                  todo el mundo.
                </p>
                <i className="mt-5 text-center">
                   "Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y
@@ -40,9 +40,6 @@ function HomeSection() {
                />
                <Mediaplayer />
             </div>
-            {/* <div className="relative h-60 overflow-hidden bg-transparent z-1 lg:col-start-2 lg:col-end-3 flex items-center lg:p-10">
-               <img src={logo} alt="logo radio bendición" className="relative w-full max-w-lg h-min mx-auto animate-balance z-10" />
-            </div> */}
          </div>
          <svg
             className="absolute bottom-0 left-0"
