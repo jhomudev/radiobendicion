@@ -11,7 +11,7 @@ import { MainContext } from "../context/mainContext";
 
 function ArticleProg({ img, content, h_ini, h_fin }) {
    return (
-      <article className="w-full sm:w-64">
+      <article data-aos="zoom-in-down" className="w-full sm:w-64">
          <div
             content={content}
             className={
@@ -93,7 +93,10 @@ function ProgSection() {
                />
             </div>
             <br />
-            <p className="mx-auto font-rale text-slate-500 text-sm w-full max-w-3xl text-center">
+            <p
+               data-aos="fade-right"
+               className="mx-auto font-rale text-slate-500 text-sm w-full max-w-3xl text-center"
+            >
                Nuestra programación esta pensada para todo público cristiano,
                incluyendo programación infantil hasta juvenil y folcklorica,
                además de mensajes de la palabra de Dios. Disfrute de esta

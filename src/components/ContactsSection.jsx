@@ -13,13 +13,15 @@ function ContactsSection() {
    return (
       <div ref={cont} className="relative bg-c_main-normal font-advent">
          <div className="relative container mx-auto px-[5%] h-auto pt-12 lg:pt-24">
-            <h1 className="title text-c_cyan">Contáctenos</h1>
-            <p className="text-white">
-               y solicite sus canciones favoritas, lo escucharemos y atenderemos
-               los pedidos de nuestros radioyentes.
-            </p>
+            <div data-aos="fade-left">
+               <h1 className="title text-c_cyan">Contáctenos</h1>
+               <p className="text-white">
+                  y solicite sus canciones favoritas, lo escucharemos y atenderemos
+                  los pedidos de nuestros radioyentes.
+               </p>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2">
-               <div className="descri lg:col-end-2">
+               <div data-aos="fade-right" className="descri lg:col-end-2">
                   <h2 className="text-c_red text-lg mt-5">
                      Nuestros contactos
                   </h2>
@@ -61,7 +63,7 @@ function ContactsSection() {
                      </li>
                   </ul>
                </div>
-               <div className="relative w-full mt-3 lg:mt-0 lg:w-96 mx-auto lg:col-start-2 lg:col-end-3 overflow-hidden lg:overflow-visible">
+               <div data-aos="fade-left" className="relative w-full mt-3 lg:mt-0 lg:w-96 mx-auto lg:col-start-2 lg:col-end-3 overflow-hidden lg:overflow-visible">
                   <img className="w-full relative lg:w-auto shadow-2xl" src={radio3} alt="radio bendición" />
                   <img className="w-52 hidden lg:block lg:w-auto lg:absolute lg:right-64 lg:top-24" src={radio2} alt="radio bendición" />
                   <img className="w-52 hidden lg:block lg:w-auto lg:ml-20" src={radio1} alt="radio bendición" />

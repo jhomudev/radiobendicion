@@ -26,12 +26,12 @@ function Mediaplayer() {
    }
 
    return (
-      <div className="relative w-full max-w-3xl flex flex-col items-center z-20 font-advent">
-         <div className="bg-gray-200 w-[85%] max-w-xs overflow-hidden flex rounded-lg">
+      <div data-aos="fade-up" className="relative w-full max-w-3xl flex flex-col items-center z-20 font-advent">
+         <div className="bg-gray-200 w-[85%] max-w-xs overflow-hidden flex items-center rounded-lg">
             <div className="hidden sm:block logo bg-slate-700 flex-1 px-1">
                <img src={logo} alt="logo radio bendición" className="w-[70%] h-min sm:w-[90%] mx-auto" />
             </div>
-            <div className="info self-end flex-1 px-4 py-2 flex sm:flex-col items-center gap-3 sm:gap-1 text-center sm:text-left">
+            <div className="flex-1 px-4 py-2 flex sm:flex-col items-center gap-3 sm:gap-1 text-center sm:text-left">
                <strong className="font-bold text-2xl concert text-c_red">Radio bendición</strong>
                <span className="text-sm text-slate-500 leading-tight">
                   Palmapampa - Samugari

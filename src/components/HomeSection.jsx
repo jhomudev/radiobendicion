@@ -9,31 +9,31 @@ function HomeSection() {
          <div className="relative container min-h-[calc(100vh-5rem)] mx-auto px-[5%] grid grid-cols-1 lg:grid-cols-2 justify-center lg:items-center">
             <div className="after-imgBg absolute z-0 left-0 top-0 w-full h-full object-contain">
                <img
-                  className="relative opacity-20 w-full h-full"
+                  className="relative opacity-20 w-full h-full drop-shadow-xl"
                   src={imgMusic}
                   alt="musica"
                />
             </div>
             <div className="relative z-1 lg:col-end-2 flex flex-col items-center justify-center text-white">
-               <strong className="flex flex-wrap w-full mt-14 lg:-mt-20 font-crimson font-extrabold italic text-5xl tracking-wider">
+               <strong data-aos="fade-down" className="flex flex-wrap w-full mt-14 lg:-mt-20 font-crimson font-extrabold italic text-5xl tracking-wider">
                   RADIO BENDICIÓN
                   <br />
                   90.5 FM
                   <span className="w-full text-xl">PALMAPAMPA SAMUGARI</span>
                </strong>
-               <p className="text-md font-advent mt-4">
+               <p data-aos="fade-right" className="text-md font-advent mt-4">
                   La radio bendicion.com 90.5 FM. Es una bendición para
                   creyentes en Cristo y el público en general de habla quechua y
                   hispana. Es una radio digital que transmite desde Perú para
                   todo el mundo.
                </p>
-               <i className="mt-5 text-center">
+               <i data-aos="fade-up" className="mt-5 text-center">
                   "Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y
                   cantad con gozo, cantad alabanzas." Salmos 98:4
                </i>
             </div>
             <div className="relative h-full grid place-items-center">
-               <img
+               <img data-aos="zoom-out-up"
                   className="absolute top-0 lg:top-32"
                   src={img3}
                   alt="palmapampa samugari"
