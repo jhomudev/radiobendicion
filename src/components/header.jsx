@@ -15,7 +15,7 @@ function Header() {
       nos,
       scrollTosection,
    } = useContext(MainContext);
-   function ItemNav({ to, text, capitalizer,enabledShowBar }) {
+   function ItemNav({ to, text, capitalizer,enabledShowBar,afterItemNav}) {
       return (
          <li
             onClick={() => {
@@ -25,10 +25,10 @@ function Header() {
             // onClick={showBar}
             className={
                capitalizer +
-               " grid justify-center items-center sm:justify-start font-medium cursor-pointer"
+               " relative grid justify-center items-center sm:justify-start font-medium cursor-pointer"
             }
          >
-            <a className="text-white text-lg hover:font-bold hover:text-xl transition-all duration-200">
+            <a className={afterItemNav+" text-white text-lg hover:font-bold hover:text-xl transition-all duration-200"}>
                {text}
             </a>
          </li>
@@ -71,10 +71,10 @@ function Header() {
             </div>
             <nav className="hidden md:flex justify-between gap-10">
                <ul className="flex gap-10">
-                  <ItemNav to={home} enabledShowBar={false} text="Home" />
-                  <ItemNav to={prog} enabledShowBar={false} text="Programación" />
-                  <ItemNav to={cont} enabledShowBar={false} text="Contactos" />
-                  <ItemNav to={nos} enabledShowBar={false} text="Nosotros" />
+                  <ItemNav to={home} afterItemNav="afterItemNav" enabledShowBar={false} text="Home" />
+                  <ItemNav to={prog} afterItemNav="afterItemNav" enabledShowBar={false} text="Programación" />
+                  <ItemNav to={cont} afterItemNav="afterItemNav" enabledShowBar={false} text="Contactos" />
+                  <ItemNav to={nos} afterItemNav="afterItemNav" enabledShowBar={false} text="Nosotros" />
                </ul>
                <button
                   ref={btnNavPlay}

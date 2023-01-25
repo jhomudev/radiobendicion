@@ -19,7 +19,7 @@ function HomeSection() {
                   RADIO BENDICIÓN
                   <br />
                   90.5 FM
-                  <span className="w-full text-xl">PALMAPAMPA SAMUGARI</span>
+                  <span className="w-full text-xl">PALMAPAMPA - SAMUGARI</span>
                </strong>
                <p data-aos="fade-right" className="text-md font-advent mt-4">
                   La radio bendicion.com 90.5 FM. Es una bendición para

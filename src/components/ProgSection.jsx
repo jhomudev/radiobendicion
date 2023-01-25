@@ -95,7 +95,7 @@ function ProgSection() {
             <br />
             <p
                data-aos="fade-right"
-               className="mx-auto font-rale text-slate-500 text-sm w-full max-w-3xl text-center"
+               className="mx-auto font-rale font-semibold text-slate-400 text-sm w-full max-w-3xl text-center"
             >
                Nuestra programación esta pensada para todo público cristiano,
                incluyendo programación infantil hasta juvenil y folcklorica,
