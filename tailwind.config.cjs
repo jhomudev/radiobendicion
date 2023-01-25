@@ -20,21 +20,7 @@ module.exports = {
             c_violet: "#884ce1",
             c_cyan: "#37d8d8",
             c_dark: "#1A0E26",
-         },
-         keyframes: {
-            rotateMedium: {
-               "0%": { transform: "rotate(-10deg)" },
-               "100%": { transform: "rotate(10deg)" },
-            },
-            rotateComplete: {
-               "0%": { transform: "rotate(0)" },
-               "100%": { transform: "rotate(360deg)" },
-            },
-         },
-         animation: {
-            balance: "rotateMedium 2s ease-in-out alternate infinite",
-            discRotate: "rotateComplete 5s infinite linear ",
-         },
+         }
       },
       plugins: [],
    },
