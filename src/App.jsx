@@ -14,6 +14,7 @@ function App() {
 
    window.onload = () => {
       AOS.init();
+      audio.current.play();
       audio.current.volume = 0;
    };
    window.addEventListener("scroll", () => {
