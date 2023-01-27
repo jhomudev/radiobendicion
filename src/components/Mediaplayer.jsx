@@ -25,7 +25,7 @@ function Mediaplayer() {
          isPlaying
             ? (audio.current.volume = volume.current.value)
             : (audio.current.volume = 0);
-            btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
+         btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
       }
       isMuted ? changeStateVolume(false) : changeStateVolume(true);
    }
@@ -104,6 +104,7 @@ function Mediaplayer() {
          <audio
             ref={audio}
             src="https://sp.dattavolt.com/8074/stream"
+            autoPlay
             controls
             className="hidden"
          ></audio>
