@@ -5,24 +5,40 @@ import { useContext, useState } from "react";
 import { MainContext } from "../context/mainContext";
 
 function Mediaplayer() {
-   const { play, btnVolume, disc, audio, btnPlay, volume } =
-      useContext(MainContext);
-   const [isMuted, changeStateVolume] = useState(false);
+   const {
+      play,
+      isMuted,
+      isPlaying,
+      changeStateVolume,
+      btnVolume,
+      disc,
+      audio,
+      btnPlay,
+      volume,
+   } = useContext(MainContext);
 
    function mutedAudio() {
-      !isMuted
-         ? (audio.current.volume = 0)
-         : (audio.current.volume = volume.current.value);
-      isMuted ? changeStateVolume(false) : changeStateVolume(true);
-      if (!isMuted)
+      if (!isMuted) {
+         audio.current.volume = 0;
          btnVolume.current.classList.add("ph-speaker-simple-slash-fill");
-      else btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
+      } else {
+         isPlaying
+            ? (audio.current.volume = volume.current.value)
+            : (audio.current.volume = 0);
+            btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
+      }
+      isMuted ? changeStateVolume(false) : changeStateVolume(true);
    }
    function changeVolume() {
-      audio.current.volume = volume.current.value;
-      if (audio.current.volume == 0)
-         btnVolume.current.classList.add("ph-speaker-simple-slash-fill");
-      else btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
+      if (isPlaying) {
+         audio.current.volume = volume.current.value;
+         if (audio.current.volume === 0)
+            btnVolume.current.classList.add("ph-speaker-simple-slash-fill");
+         else
+            btnVolume.current.classList.remove("ph-speaker-simple-slash-fill");
+      } else {
+         audio.current.volume = 0;
+      }
    }
 
    return (

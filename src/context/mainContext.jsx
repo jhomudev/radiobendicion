@@ -4,6 +4,7 @@ import { createContext, useState, useRef } from "react";
 export const MainContext = createContext();
 export function MainContextProvider(props) {
    const [isPlaying, changeStateMedia] = useState(false);
+   const [isMuted, changeStateVolume] = useState(false);
 
    const btnTop = useRef();
    const btnVolume = useRef();
@@ -27,7 +28,13 @@ export function MainContextProvider(props) {
    }
 
    function play() {
-      !isPlaying ? audio.current.play() : audio.current.pause();
+      // !isPlaying ? audio.current.play() : audio.current.pause();
+      if (!isPlaying) {
+         audio.current.volume = isMuted ? 0 : volume.current.value;
+      } else {
+         audio.current.volume = 0;
+      }
+
       isPlaying ? changeStateMedia(false) : changeStateMedia(true);
       if (!isPlaying) {
          btnPlay.current.classList.add("ph-pause-fill");
@@ -61,6 +68,9 @@ export function MainContextProvider(props) {
             cont,
             nos,
             scrollTosection,
+            isPlaying,
+            isMuted,
+            changeStateVolume,
          }}
       >
          {props.children}

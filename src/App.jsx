@@ -9,14 +9,17 @@ import { FaAngleUp } from "react-icons/fa";
 import { useContext } from "react";
 import { MainContext } from "./context/mainContext";
 
-
 function App() {
-   const { home, scrollTosection,btnTop } = useContext(MainContext);
-   
-   window.onload = () => AOS.init();
+   const { home, scrollTosection, btnTop, audio } = useContext(MainContext);
+
+   window.onload = () => {
+      AOS.init();
+      audio.current.play();
+      audio.current.volume = 0;
+   };
    window.addEventListener("scroll", () => {
       document.documentElement.scrollTop > 10
-         ? btnTop.current.classList.add("!opacity-100") 
+         ? btnTop.current.classList.add("!opacity-100")
          : btnTop.current.classList.remove("!opacity-100");
    });
 
@@ -42,9 +45,6 @@ function App() {
          </div>
       </>
    );
-
-   
-   
 }
 
 export default App;
