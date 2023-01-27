@@ -104,6 +104,7 @@ function Mediaplayer() {
          <audio
             ref={audio}
             src="https://sp.dattavolt.com/8074/stream"
+            autoPlay
             controls
             className="hidden"
          ></audio>
