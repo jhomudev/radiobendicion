@@ -29,8 +29,9 @@ export function MainContextProvider(props) {
 
    function playMedia() {
       // !isPlaying ? audio.current.play() : audio.current.pause();
+      audio.current.play();
       if (!isPlaying) {
-         audio.current.volume=isMuted ? 0 : volume.current.value;
+         audio.current.volume = isMuted ? 0 : volume.current.value;
       } else {
          audio.current.volume = 0;
       }
