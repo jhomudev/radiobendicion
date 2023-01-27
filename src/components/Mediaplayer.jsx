@@ -6,7 +6,7 @@ import { MainContext } from "../context/mainContext";
 
 function Mediaplayer() {
    const {
-      play,
+      playMedia,
       isMuted,
       isPlaying,
       changeStateVolume,
@@ -78,7 +78,7 @@ function Mediaplayer() {
             <div className="mediaplayer bg-gray-100 px-3 py-1 rounded-md flex items-center gap-4">
                <i
                   ref={btnPlay}
-                  onClick={play}
+                  onClick={playMedia}
                   className="ph-play-fill text-gray-300 text-4xl hover:text-c_red transition-all duration-100"
                ></i>
                <div className="volume w-20 flex items-center gap-1">
@@ -104,7 +104,6 @@ function Mediaplayer() {
          <audio
             ref={audio}
             src="https://sp.dattavolt.com/8074/stream"
-            autoPlay
             controls
             className="hidden"
          ></audio>

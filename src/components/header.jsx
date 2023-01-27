@@ -6,7 +6,7 @@ import { MainContext } from "../context/mainContext";
 
 function Header() {
    const {
-      play,
+      playMedia,
       btnNavPlay,
       btnModalNavPlay,
       home,
@@ -15,11 +15,11 @@ function Header() {
       nos,
       scrollTosection,
    } = useContext(MainContext);
-   function ItemNav({ to, text, capitalizer,enabledShowBar,afterItemNav}) {
+   function ItemNav({ to, text, capitalizer, enabledShowBar, afterItemNav }) {
       return (
          <li
             onClick={() => {
-               if(enabledShowBar) showBar();
+               if (enabledShowBar) showBar();
                scrollTosection(to);
             }}
             // onClick={showBar}
@@ -28,7 +28,12 @@ function Header() {
                " relative grid justify-center items-center sm:justify-start font-medium cursor-pointer"
             }
          >
-            <a className={afterItemNav+" text-white text-lg hover:font-bold hover:text-xl transition-all duration-200"}>
+            <a
+               className={
+                  afterItemNav +
+                  " text-white text-lg hover:font-bold hover:text-xl transition-all duration-200"
+               }
+            >
                {text}
             </a>
          </li>
@@ -71,14 +76,34 @@ function Header() {
             </div>
             <nav className="hidden md:flex justify-between gap-10">
                <ul className="flex gap-10">
-                  <ItemNav to={home} afterItemNav="afterItemNav" enabledShowBar={false} text="Home" />
-                  <ItemNav to={prog} afterItemNav="afterItemNav" enabledShowBar={false} text="Programación" />
-                  <ItemNav to={cont} afterItemNav="afterItemNav" enabledShowBar={false} text="Contactos" />
-                  <ItemNav to={nos} afterItemNav="afterItemNav" enabledShowBar={false} text="Nosotros" />
+                  <ItemNav
+                     to={home}
+                     afterItemNav="afterItemNav"
+                     enabledShowBar={false}
+                     text="Home"
+                  />
+                  <ItemNav
+                     to={prog}
+                     afterItemNav="afterItemNav"
+                     enabledShowBar={false}
+                     text="Programación"
+                  />
+                  <ItemNav
+                     to={cont}
+                     afterItemNav="afterItemNav"
+                     enabledShowBar={false}
+                     text="Contactos"
+                  />
+                  <ItemNav
+                     to={nos}
+                     afterItemNav="afterItemNav"
+                     enabledShowBar={false}
+                     text="Nosotros"
+                  />
                </ul>
                <button
                   ref={btnNavPlay}
-                  onClick={play}
+                  onClick={playMedia}
                   className="bg-white hover:bg-gray-200 transition-all duration-500 hover:outline hover:outline-2 hover:outline-c_red px-10 py-1 rounded-full text-c_red text-2xl font-bold font-bahiana tracking-widest"
                >
                   PLAY
@@ -93,14 +118,34 @@ function Header() {
             }
          >
             <ul className="flex flex-col gap-10">
-               <ItemNav to={home} enabledShowBar={true} capitalizer="uppercase" text="Home" />
-               <ItemNav to={prog} enabledShowBar={true} capitalizer="uppercase" text="Programación" />
-               <ItemNav to={cont} enabledShowBar={true} capitalizer="uppercase" text="Contactos" />
-               <ItemNav to={nos} enabledShowBar={true} capitalizer="uppercase" text="Nosotros" />
+               <ItemNav
+                  to={home}
+                  enabledShowBar={true}
+                  capitalizer="uppercase"
+                  text="Home"
+               />
+               <ItemNav
+                  to={prog}
+                  enabledShowBar={true}
+                  capitalizer="uppercase"
+                  text="Programación"
+               />
+               <ItemNav
+                  to={cont}
+                  enabledShowBar={true}
+                  capitalizer="uppercase"
+                  text="Contactos"
+               />
+               <ItemNav
+                  to={nos}
+                  enabledShowBar={true}
+                  capitalizer="uppercase"
+                  text="Nosotros"
+               />
             </ul>
             <button
                ref={btnModalNavPlay}
-               onClick={play}
+               onClick={playMedia}
                className="bg-white w-full mt-10 hover:bg-gray-200 transition-all duration-500 hover:outline hover:outline-2 hover:outline-c_red px-10 py-1 rounded-full text-c_red text-2xl font-bold font-bahiana tracking-widest"
             >
                PLAY

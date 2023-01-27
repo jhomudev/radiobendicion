@@ -27,10 +27,10 @@ export function MainContextProvider(props) {
       });
    }
 
-   function play() {
+   function playMedia() {
       // !isPlaying ? audio.current.play() : audio.current.pause();
       if (!isPlaying) {
-         audio.current.volume = isMuted ? 0 : volume.current.value;
+         audio.current.volume=isMuted ? 0 : volume.current.value;
       } else {
          audio.current.volume = 0;
       }
@@ -54,7 +54,7 @@ export function MainContextProvider(props) {
    return (
       <MainContext.Provider
          value={{
-            play,
+            playMedia,
             btnTop,
             btnVolume,
             disc,
