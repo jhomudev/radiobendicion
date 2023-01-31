@@ -6,16 +6,17 @@ import ContactsSection from "./components/ContactsSection";
 import NosotrosSection from "./components/NosotrosSection";
 import Footer from "./components/Footer";
 import { FaAngleUp } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MainContext } from "./context/mainContext";
 
 function App() {
   const { home, scrollTosection, btnTop, audio } = useContext(MainContext);
 
-  window.onload = () => {
+  useEffect(() => {
     AOS.init();
     audio.current.volume = 0;
-  };
+  }, []);
+  
   window.addEventListener("scroll", () => {
     document.documentElement.scrollTop > 10
       ? btnTop.current.classList.add("!opacity-100")
