@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/header";
+import Header from "./components/Header";
 import HomeSection from "./components/HomeSection";
 import ProgSection from "./components/ProgSection";
 import ContactsSection from "./components/ContactsSection";
@@ -16,7 +16,7 @@ function App() {
     AOS.init();
     audio.current.volume = 0;
   }, []);
-  
+
   window.addEventListener("scroll", () => {
     document.documentElement.scrollTop > 10
       ? btnTop.current.classList.add("!opacity-100")
