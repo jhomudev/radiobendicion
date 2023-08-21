@@ -3,6 +3,7 @@ import React from "react";
 import { useRef, useState, useContext } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { MainContext } from "../context/mainContext";
+import imgLogoPlayer from "./../assets/logo-radio-adp.jpeg";
 
 function Header() {
   const {
@@ -60,7 +61,8 @@ function Header() {
       className="w-full z-50 top-0 px-2 sm:p-0headerBox bg-c_main-normal font-advent"
     >
       <header className="relative container h-20 mx-auto flex justify-between items-center">
-        <a href="" className="logo relative w-28 sm:w-36 h-full object-contain">
+        <a href="" className="logo relative w-28 sm:w-36 h-full object-cover flex gap-2 items-center">
+          <img src={ imgLogoPlayer} alt="logo"  className="w-[60px] h-[60px] rounded-full"/>
           <img
             src={logo}
             alt="logotipo radio bendicion"

@@ -1,5 +1,6 @@
 import React from "react";
 import imgdisco from "../assets/imgdisco.jpg";
+import imgLogoPlayer from "./../assets/logo-radio-adp.jpeg";
 import logo from "../assets/logotipo.svg";
 import { useContext, useState } from "react";
 import { MainContext } from "../context/mainContext";
@@ -67,11 +68,11 @@ function Mediaplayer() {
       <div className="bg-white w-[90%] max-w-sm flex flex-col justify-center items-center gap-3 rounded-lg px-5 py-4 -mt-2 shadow-xl">
         <div
           ref={disc}
-          className="disc relative w-56 h-56 sm:w-64 sm:h-64 border-2 border-white shadow-xl rounded-full overflow-hidden grid place-items-center transition-all duration-500"
+          className="disc relative w-56 h-56 sm:w-64 sm:h-64 border-4 border-slate-500 shadow-xl rounded-full overflow-hidden grid place-items-center transition-all duration-500"
         >
           <img
-            src={imgdisco}
-            className="absolute w-full h-full object-cover"
+            src={imgLogoPlayer}
+            className="absolute w-full h-full object-fill"
             alt="gospel"
           />
           <span className="bg-white p-4 rounded-full z-10"></span>
