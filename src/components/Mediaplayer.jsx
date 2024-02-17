@@ -105,7 +105,7 @@ function Mediaplayer() {
       </div>
       <audio
         ref={audio}
-        src="https://sp.dattavolt.com/8074/stream"
+        src="http://stream.zeno.fm/p1als7syrtmuv"
         controls
         className="hidden"
       ></audio>
